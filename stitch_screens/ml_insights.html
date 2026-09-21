@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#4f46e5", "secondary-fixed": "#6ffbbe", "tertiary-container": "#5551c2", "on-error-container": "#93000a", "surface-container-low": "#f2f3ff", "on-surface": "#131b2e", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "tertiary-fixed-dim": "#c3c0ff", "on-secondary": "#ffffff", "on-primary-fixed": "#0f0069", "secondary-fixed-dim": "#4edea3", "outline-variant": "#c7c4d8", "on-tertiary-fixed-variant": "#3b35a7", "outline": "#777587", "inverse-surface": "#283044", "on-primary-fixed-variant": "#3323cc", "surface-tint": "#4d44e3", "surface-container-high": "#e2e7ff", "primary-fixed": "#e2dfff", "secondary-container": "#6cf8bb", "primary-fixed-dim": "#c3c0ff", "on-tertiary-fixed": "#0f0069", "on-primary-container": "#dad7ff", "on-surface-variant": "#464555", "inverse-primary": "#c3c0ff", "error-container": "#ffdad6", "tertiary-fixed": "#e2dfff", "surface": "#faf8ff", "on-tertiary": "#ffffff", "on-secondary-fixed": "#002113", "surface-container-highest": "#dae2fd", "on-error": "#ffffff", "background": "#faf8ff", "surface-variant": "#dae2fd", "surface-container": "#eaedff", "on-background": "#131b2e", "error": "#ba1a1a", "secondary": "#006c49", "on-tertiary-container": "#dbd7ff", "on-secondary-fixed-variant": "#005236", "surface-bright": "#faf8ff", "tertiary": "#3d37a9", "primary": "#3525cd", "surface-dim": "#d2d9f4", "on-secondary-container": "#00714d", "inverse-on-surface": "#eef0ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.25rem", "space-lg": "1.5rem", "space-md": "1rem" }, "fontFamily": { "label-lg": ["Manrope"], "body-md": ["Manrope"], "headline-md": ["Manrope"], "display-lg-mobile": ["Manrope"], "display-lg": ["Manrope"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "label-sm": ["Manrope"], "headline-lg": ["Manrope"], "label-md": ["Manrope"], "headline-sm": ["Manrope"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">insights</span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">EduPredict AI</span><span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">v1.4 • R² 0.78</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Model Insights</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Profile Settings" class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WO4qWkb6RmcM11Q1w7bZWq8SeQqrz_LVlL18tr2SZSAHDndNjaYbaeMDdl89z7O1GkjpzJn0mRLvqew_ECpekxg7Itxaq1zUlBI4bX8AWD5BJ9EGAZhiMV7xcOV0sPmj_pqdfzYTPOagotjcX5WcewJYXmiHnALm7Od22s1NHF8ADHkr4_psrJlShtynhxZBq-rHDWbC3YNdzpv2I2EfmAAI3EzUQ0OXk0qNWADKcfMyBcbnS6sHwZbuk"/></button></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 px-margin flex flex-col"><div class="flex flex-col w-full gap-space-lg pb-6">
+<!-- Model Performance Benchmark Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Benchmark Evaluation</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">5-fold CV • 1,000 Exam Cohorts</p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Champion
+      </span>
+</div>
+<!-- Comparative Table/Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<!-- Random Forest (Champion) -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Random Forest</span>
+<span class="text-on-primary bg-primary rounded px-1 text-[9px] font-bold uppercase tracking-wider">Top</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">0.782</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">R²</span>
+</div>
+<div class="flex flex-col gap-0.5 pt-1">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>MAE</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.12 pts</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>RMSE</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">5.34 pts</span>
+</div>
+</div>
+</div>
+<!-- Linear Regression (Baseline) -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-1.5 shadow-[0_1px_4px_rgba(0,0,0,0.03)] opacity-85">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">LinReg Baseline</span>
+<span class="text-on-surface-variant bg-surface-container-high rounded px-1 text-[9px]">Ref</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface-variant">0.738</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">R²</span>
+</div>
+<div class="flex flex-col gap-0.5 pt-1">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>MAE</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.88 pts</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>RMSE</span>
+<span class="font-label-sm text-label-sm text-on-surface">6.10 pts</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container rounded-lg px-2.5 py-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary">analytics</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Variance explained increased by <span class="font-bold text-on-surface">+4.4%</span> over standard OLS models with balanced shrinkage.
+      </p>
+</div>
+</div>
+<!-- Global Feature Importance Ranking -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Feature Importance</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Gini impurity reduction across 250 decision trees</p>
+</div>
+<button class="min-w-[36px] min-h-[36px] rounded-lg bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container transition-colors" id="toggleSortBtn" title="Toggle Sorting View">
+<span class="material-symbols-outlined text-[18px]">swap_vert</span>
+</button>
+</div>
+<!-- Bars Container -->
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Test Preparation Course
+          </span>
+<span class="text-primary font-bold">31%</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 31%;"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            Lunch Type (Socioeconomic Aid)
+          </span>
+<span class="text-primary-container font-bold">27%</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 27%;"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Parental Education Level
+          </span>
+<span class="text-tertiary font-bold">22%</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 22%;"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+            Race / Ethnicity Group
+          </span>
+<span class="text-tertiary-container font-bold">12%</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+            Gender Factor
+          </span>
+<span class="text-outline font-bold">8%</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 8%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive SHAP Waterfall / Beeswarm Explainer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">SHAP Value Attribution</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Local contributions to avg score (M+R+W)/3</p>
+</div>
+<div class="flex bg-surface-container rounded-lg p-0.5">
+<button class="px-2.5 py-1 text-on-primary bg-primary rounded font-label-sm text-label-sm font-bold shadow-xs" id="btnWaterfall">Waterfall</button>
+<button class="px-2.5 py-1 text-on-surface-variant rounded font-label-sm text-label-sm font-medium hover:text-on-surface" id="btnDistribution">Beeswarm</button>
+</div>
+</div>
+<!-- Interactive Interactive Waterfall Diagram -->
+<div class="bg-surface-container-low rounded-lg p-3 flex flex-col gap-2 relative" id="shapCanvas">
+<div class="flex justify-between items-center pb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Base Value E[f(x)] = <span class="font-bold text-on-surface">67.7 pts</span></span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Cohort Median</span>
+</div>
+<!-- SVG Waterfall chart -->
+<svg class="w-full h-40 text-on-surface" fill="none" viewbox="0 0 320 150" xmlns="http://www.w3.org/2000/svg">
+<!-- Baseline Reference line -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.2" x1="70" x2="70" y1="5" y2="145"></line>
+<text class="text-[9px] font-label-sm opacity-60" fill="currentColor" x="73" y="15">Base: 67.7</text>
+<!-- Bar 1: Prep Completed (+8.4 pts) -->
+<g class="cursor-pointer group" onclick="highlightShap('Prep Course Completed', '+8.4 pts', 'Students who finished the prep curriculum gained a sharp bump across all analytical segments.')">
+<text class="text-[10px] font-semibold" fill="currentColor" x="5" y="38">Prep: Done</text>
+<rect class="transition-opacity hover:opacity-90" fill="#006c49" height="14" rx="3" width="65" x="70" y="28"></rect>
+<text class="text-[10px] font-bold" fill="#006c49" x="140" y="39">+8.4</text>
+</g>
+<!-- Bar 2: Standard Lunch (+5.8 pts) -->
+<g class="cursor-pointer group" onclick="highlightShap('Standard Lunch', '+5.8 pts', 'Reflects stable nutritional availability and higher correlated household academic resources.')">
+<text class="text-[10px] font-semibold" fill="currentColor" x="5" y="66">Lunch: Std</text>
+<rect class="transition-opacity hover:opacity-90" fill="#006c49" height="14" rx="3" width="46" x="135" y="56"></rect>
+<text class="text-[10px] font-bold" fill="#006c49" x="186" y="67">+5.8</text>
+</g>
+<!-- Bar 3: Parent: Masters Degree (+4.1 pts) -->
+<g class="cursor-pointer group" onclick="highlightShap('Parent: Master Degree', '+4.1 pts', 'Advanced home educational mentorship significantly bolsters math and reading foundational skills.')">
+<text class="text-[10px] font-semibold" fill="currentColor" x="5" y="94">Edu: Master</text>
+<rect class="transition-opacity hover:opacity-90" fill="#006c49" height="14" rx="3" width="34" x="181" y="84"></rect>
+<text class="text-[10px] font-bold" fill="#006c49" x="220" y="95">+4.1</text>
+</g>
+<!-- Bar 4: Group A Demographics (-3.2 pts) -->
+<g class="cursor-pointer group" onclick="highlightShap('Race: Group A', '-3.2 pts', 'Historical institutional resource disparities create a modest negative pull on final scores.')">
+<text class="text-[10px] font-semibold" fill="currentColor" x="5" y="122">Group: A</text>
+<rect class="transition-opacity hover:opacity-90" fill="#ba1a1a" height="14" rx="3" width="26" x="189" y="112"></rect>
+<text class="text-[10px] font-bold" fill="#ba1a1a" x="160" y="123">-3.2</text>
+</g>
+<!-- Predicted Score Result Arrow -->
+<line stroke="#3525cd" stroke-width="2" x1="189" x2="189" y1="130" y2="145"></line>
+<circle cx="189" cy="142" fill="#3525cd" r="3"></circle>
+<text class="text-[10px] font-extrabold" fill="#3525cd" x="196" y="145">f(x) = 82.8</text>
+</svg>
+<!-- Active Insight Callout Box -->
+<div class="bg-surface-container-lowest rounded-lg p-2.5 shadow-xs flex flex-col gap-0.5" id="shapDetailPanel">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold" id="shapDetailTitle">Prep Course Completed</span>
+<span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded font-label-sm text-label-sm font-extrabold" id="shapDetailImpact">+8.4 pts</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="shapDetailDesc">
+          Students who finished the prep curriculum gained a sharp bump across all analytical segments.
+        </p>
+</div>
+</div>
+<!-- Visual Legend -->
+<div class="flex items-center justify-center gap-space-lg text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="text-on-surface-variant">Positive Driver (+)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="text-on-surface-variant">Negative Drag (-)</span>
+</div>
+</div>
+</div>
+<!-- Model Artifact & Runtime Topology -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Model Artifact Metadata</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Serialization &amp; production pipeline</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container px-2 py-0.5 rounded-full font-mono">
+        v1.4.2
+      </span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Binary Asset</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-bold truncate">student_model_v1.joblib</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1.4 MB on disk</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inference Latency</span>
+<span class="font-label-md text-label-md text-secondary font-bold">38 ms</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">95th percentile SLA</span>
+</div>
+</div>
+<!-- Pipeline components step badges -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold tracking-wider">Pipeline Transformers</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">data_object</span>
+          OneHotEncoder (Categoricals)
+        </span>
+<span class="bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-1 rounded-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">tune</span>
+          StandardScaler (Norm)
+        </span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2 py-1 rounded-md flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]">account_tree</span>
+          RandomForestRegressor
+        </span>
+</div>
+</div>
+</div>
+<!-- Primary & Secondary Quick Inspection Actions -->
+<div class="flex flex-col gap-space-sm pt-1">
+<button class="w-full min-h-[48px] bg-primary hover:bg-on-primary-fixed-variant text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99]" onclick="inspectHyperparams()">
+<span class="material-symbols-outlined text-[20px]">settings_suggest</span>
+      Inspect Tuned Hyperparameters
+    </button>
+<button class="w-full min-h-[44px] bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-2 transition-colors" onclick="viewErrorDist()">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">stacked_bar_chart</span>
+      View Residual &amp; Error Distribution
+    </button>
+</div>
+<!-- Hyperparameter Modal Overlay -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-xs flex items-end justify-center p-0" id="hyperparamsModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-space-md shadow-xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Hyperparameters</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high" onclick="closeModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<span class="text-on-surface font-mono">n_estimators</span>
+<span class="font-bold text-primary font-mono">250</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<span class="text-on-surface font-mono">max_depth</span>
+<span class="font-bold text-primary font-mono">14</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<span class="text-on-surface font-mono">min_samples_split</span>
+<span class="font-bold text-primary font-mono">4</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<span class="text-on-surface font-mono">min_samples_leaf</span>
+<span class="font-bold text-primary font-mono">2</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<span class="text-on-surface font-mono">criterion</span>
+<span class="font-bold text-primary font-mono">'squared_error'</span>
+</div>
+</div>
+<button class="w-full min-h-[44px] bg-primary text-on-primary rounded-lg font-label-lg text-label-lg font-semibold mt-1" onclick="closeModal()">
+        Done Exploring
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function highlightShap(title, impact, desc) {
+    const titleEl = document.getElementById('shapDetailTitle');
+    const impactEl = document.getElementById('shapDetailImpact');
+    const descEl = document.getElementById('shapDetailDesc');
+    
+    if (titleEl && impactEl && descEl) {
+      titleEl.innerText = title;
+      impactEl.innerText = impact;
+      descEl.innerText = desc;
+
+      if (impact.startsWith('+')) {
+        impactEl.className = 'bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded font-label-sm text-label-sm font-extrabold';
+      } else {
+        impactEl.className = 'bg-error-container text-on-error-container px-1.5 py-0.5 rounded font-label-sm text-label-sm font-extrabold';
+      }
+    }
+  }
+
+  function inspectHyperparams() {
+    const modal = document.getElementById('hyperparamsModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('hyperparamsModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function viewErrorDist() {
+    highlightShap('Residual Variance', 'MAE ±4.12', 'Error follows a normalized bell curve centered at zero with 92% of predictions inside a ±6 point envelope.');
+  }
+
+  // Toggle view state between Waterfall and Beeswarm
+  const btnWaterfall = document.getElementById('btnWaterfall');
+  const btnDistribution = document.getElementById('btnDistribution');
+  
+  if (btnWaterfall && btnDistribution) {
+    btnWaterfall.addEventListener('click', () => {
+      btnWaterfall.className = 'px-2.5 py-1 text-on-primary bg-primary rounded font-label-sm text-label-sm font-bold shadow-xs';
+      btnDistribution.className = 'px-2.5 py-1 text-on-surface-variant rounded font-label-sm text-label-sm font-medium hover:text-on-surface';
+    });
+
+    btnDistribution.addEventListener('click', () => {
+      btnDistribution.className = 'px-2.5 py-1 text-on-primary bg-primary rounded font-label-sm text-label-sm font-bold shadow-xs';
+      btnWaterfall.className = 'px-2.5 py-1 text-on-surface-variant rounded font-label-sm text-label-sm font-medium hover:text-on-surface';
+      highlightShap('Beeswarm Dispersion', 'SHAP Spread', 'Test preparation and lunch type demonstrate the largest lateral SHAP dispersion across all 1,000 students.');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(19,27,46,0.05)]" data-active-classes="text-primary font-bold"><div class="h-16 px-space-xs grid grid-cols-4 items-center"><a class="min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="predict" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm">Predict</span></a><a aria-current="page" class="min-h-[44px] flex flex-col items-center justify-center gap-0.5 transition-colors text-primary font-bold" data-path="model-insights" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-label-sm">Insights</span></a><a class="min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dataset-metrics" href="#"><span class="material-symbols-outlined text-[22px]">table_chart</span><span class="font-label-sm text-label-sm">Metrics</span></a><a class="min-h-[44px] flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="api-export" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm">Export</span></a></div></nav></body></html>

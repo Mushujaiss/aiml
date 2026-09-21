@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.so
+venv/
+.venv/
+env/
+
+# Models & data (large files)
+# model.joblib  ← keep this in git (small, ~1MB)
+*.pkl
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Next.js
+nextjs-app/.next/
+nextjs-app/out/
+nextjs-app/node_modules/
+nextjs-app/.vercel/
+nextjs-app/npm-debug.log*
+nextjs-app/yarn-debug.log*
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
